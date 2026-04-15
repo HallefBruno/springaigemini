@@ -12,15 +12,9 @@ Este projeto é uma API REST para gerenciar alunos e matrículas. Ele integra pr
 *   **Apache HttpClient 5**: Camada de transporte customizada para ambientes corporativos.
 *   **Bean Validation (Jakarta)**: Regras de negócio validadas diretamente no contrato da API.
 
-## 🏗️ Diferenciais de Arquitetura (Sênior)
-
 ### 1. Integração Flexível com IA
 
 A aplicação foi projetada para ser independente de fornecedores de IA. Foi implementada uma camada de comunicação direta via `RestClient` do Spring com a API do **Google Gemini**. Isso garante maior estabilidade em comparação a bibliotecas experimentais.
-
-### 2. Resiliência de Rede (SSL Bypass)
-
-Um dos desafios técnicos superados foi a implementação de um `RestClientCustomizer` customizado. Ele permite o bypass de validações SSL (PKIX path building failed) em redes corporativas restritivas. Isso usa uma estratégia de confiança customizada com **Apache HttpClient 5**.
 
 ### 3. Validações Complexas
 
