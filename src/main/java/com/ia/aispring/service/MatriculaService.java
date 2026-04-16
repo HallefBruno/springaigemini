@@ -42,7 +42,7 @@ public class MatriculaService {
 		this.alunoRepository = alunoRepository;
 		this.cursoRepository = cursoRepository;
 		this.mapper = mapper;
-		this.restClient = builder.baseUrl("https://googleapis.com").build();
+		this.restClient = builder.baseUrl("https://generativelanguage.googleapis.com").build();
 	}
 	
     @Transactional
@@ -64,7 +64,7 @@ public class MatriculaService {
 
         GeminiResponse response = restClient.post()
                 .uri(uriBuilder -> uriBuilder
-                    .path("/v1beta/models/gemini-1.5-flash:generateContent")
+                    .path("/v1beta/models/gemini-2.5-flash:generateContent")
                     .queryParam("key", apiKey)
                     .build())
                 .contentType(MediaType.APPLICATION_JSON)
